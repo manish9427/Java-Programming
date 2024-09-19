@@ -98,7 +98,6 @@ public class TargetSum {
                 }
             }
         }
-
         return pairs;
     }
 
