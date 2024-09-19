@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class $3_BalancedParentheses {
+public class BalancedParenthesesStack {
 
     public static boolean isBalanced(String str) {
         Stack<Character> stack = new Stack<Character>();

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ArrayListLL {
+public class ArrayListExample {
     public static void main(String args[]) {
         List<String> fruits = new ArrayList<>();
 
