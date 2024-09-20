@@ -84,19 +84,50 @@ Output:
 
 // -------------------------------------------------------------------------------------
 
+// import java.util.ArrayList;
+
+// public class TargetSum {
+//     public static ArrayList<int[]> findPairs(int[] nums, int targetSum) {
+//         ArrayList<int[]> pairs = new ArrayList<>();
+
+//         for (int i = 0; i < nums.length; i++) {
+//             for (int j = i + 1; j < nums.length; j++) {
+//                 if (nums[i] + nums[j] == targetSum) {
+//                     int[] pair = {nums[i], nums[j]};
+//                     pairs.add(pair);
+//                 }
+//             }
+//         }
+//         return pairs;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] nums = {2, 4, 5, 7, 8};
+//         int targetSum = 9;
+
+//         ArrayList<int[]> result = findPairs(nums, targetSum);
+//         for (int[] pair : result) {
+//             System.out.print("[" + pair[0] + ", " + pair[1] + "]");
+//         }
+//     }
+// }
+
+// -----------------------------------------------------------------------
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class TargetSum {
     public static ArrayList<int[]> findPairs(int[] nums, int targetSum) {
         ArrayList<int[]> pairs = new ArrayList<>();
+        HashSet<Integer> set = new HashSet<>();
 
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == targetSum) {
-                    int[] pair = {nums[i], nums[j]};
-                    pairs.add(pair);
-                }
+        for (int num : nums) {
+            int complement = targetSum - num;
+            if (set.contains(complement)) {
+                int[] pair = {complement, num};
+                pairs.add(pair);
             }
+            set.add(num);
         }
         return pairs;
     }
@@ -106,11 +137,13 @@ public class TargetSum {
         int targetSum = 9;
 
         ArrayList<int[]> result = findPairs(nums, targetSum);
-System.out.println();
+        
+        // Print pairs properly formatted
         for (int[] pair : result) {
             System.out.println("[" + pair[0] + ", " + pair[1] + "]");
         }
     }
 }
+
 
 
