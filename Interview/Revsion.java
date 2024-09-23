@@ -119,15 +119,33 @@ public class Revsion
         //     }
         // }
 // ----------------------------missing number for 1 to n-------------------
-        int [] arr = {1,2,3,5,6};
-        int n = arr.length+1;
-        int maxSum = n*(n+1)/2;
-        int sum = 0;
-        for(int i=0;i<arr.length;i++){
-            sum += arr[i];
-        }
-        int ans = maxSum - sum;
-        System.out.println("Missing Sum: "+ ans);
+        // int [] arr = {1,2,3,5,6};
+        // int n = arr.length+1;
+        // int maxSum = n*(n+1)/2;
+        // int sum = 0;
+        // for(int i=0;i<arr.length;i++){
+        //     sum += arr[i];
+        // }
+        // int ans = maxSum - sum;
+        // System.out.println("Missing Sum: "+ ans);
+// -------------------------------------Power of 2-----------------------
 
+
+        int n = 6;
+
+		if(powerOfTwo(n)){
+			System.out.println("Yes");
+		}else{
+			System.out.println("No");
+		}
+	}
+	public static boolean powerOfTwo(int n){
+		if(n<=0){
+			return false;
+		}
+		while(n%2==0){
+			n=n/2;
+		}	
+		return n==1;
 	}
 }
