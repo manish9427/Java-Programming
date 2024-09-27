@@ -26,6 +26,15 @@ public class LinkedListPractice {
         }
         current.next = newNode;
     }
+
+    public void insertAtPosition(int data, int pos){
+        if(pos == 0){
+            insertAtFirst(data);
+        }
+        Node newNode = new Node(data);
+        Node current = newNode;
+        
+    }
     public void display(){
         Node current = head;
         while(current != null){
@@ -39,6 +48,7 @@ public class LinkedListPractice {
         LinkedListPractice main = new LinkedListPractice();
         main.insertAtFirst(1);
         main.insertAtLast(10);
+        main.insertAtPosition(10,1);
         main.display();
     }
 }
