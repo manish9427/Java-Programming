@@ -45,9 +45,6 @@ public class Revsion
 		//     }
 		//     printArray(subArray);
 		// }
-
-
-
 // --------------------------Remove Unwanted Character ---------------
 		// 		String [] str = {"ma1&*","300","yR4000","%%%..20"};
 		// 		// Output = 4321
@@ -99,8 +96,6 @@ public class Revsion
         // int ans = maxSum - sum;
         // System.out.println("Missing Sum: "+ ans);
 // -------------------------------------Power of 2-----------------------
-
-
         int n = 6;
 
 		if(powerOfTwo(n)){
