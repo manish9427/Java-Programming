@@ -1,4 +1,4 @@
-public class PrimeNumInterview {
+public class PrimeNum_ {
     public static void main(String args[]){
         int limit = 100;
         System.out.println("Output");

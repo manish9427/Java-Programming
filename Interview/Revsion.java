@@ -46,37 +46,7 @@ public class Revsion
 		//     printArray(subArray);
 		// }
 
-// ---------------Fibonacci Series----------
-		// 		int n=10;
-		// 		int [] arr = new int[n];
-		// 		arr[0]=0;
-		// 		arr[1]=1;
-		// 		for(int i=2; i<n; i++) {
-		// 			arr[i]=arr[i-1]+arr[i-2];
-		// 		}
-		// 		for(int i=0; i<arr.length; i++) {
-		// 			System.out.print(arr[i]+" ");
-		// 		}
 
-// ----------------------Prime Number---------------------------
-		//             int limit =50 ;
-		//             for(int num=2;num<=limit;num++){
-		//                 if(isPrime(num)){
-		//                     System.out.print(num+" ");
-		//                 }
-		//             }
-
-		// 	}
-		// 	public static boolean isPrime(int num){
-		// 	    if(num<1){
-		// 	        return false;
-		// 	    }
-		// 	    for(int i=2;i<=Math.sqrt(num);i++){
-		// 	        if(num%i==0){
-		// 	            return false;
-		// 	        }
-		// 	    }
-		// 	    return true;
 
 // --------------------------Remove Unwanted Character ---------------
 		// 		String [] str = {"ma1&*","300","yR4000","%%%..20"};
