@@ -1,3 +1,6 @@
+/*
+ Determine whether a number is prime (a prime number has only two factors: 1 and itself).
+ */
 public class PrimeNum_ {
     public static void main(String args[]){
         int limit = 100;
