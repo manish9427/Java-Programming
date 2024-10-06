@@ -85,16 +85,7 @@ public class Revsion
         //             left++;
         //     }
         // }
-// ----------------------------missing number for 1 to n-------------------
-        // int [] arr = {1,2,3,5,6};
-        // int n = arr.length+1;
-        // int maxSum = n*(n+1)/2;
-        // int sum = 0;
-        // for(int i=0;i<arr.length;i++){
-        //     sum += arr[i];
-        // }
-        // int ans = maxSum - sum;
-        // System.out.println("Missing Sum: "+ ans);
+
 // -------------------------------------Power of 2-----------------------
         int n = 6;
 
