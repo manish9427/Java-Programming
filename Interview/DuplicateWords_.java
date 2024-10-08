@@ -1,3 +1,6 @@
+/*
+ Identify duplicate words in a sentence.
+ */
 import java.util.HashMap;
 import java.util.Map;
 public class DuplicateWords_ {
