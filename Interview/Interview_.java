@@ -1,15 +1,7 @@
 import java.util.*;
-public class Revsion
+public class Interview_
 {
 	public static void main(String[] args) {
-// -------------------Reverse String--------------------
-		// 		String str = "Manish";
-		// 		String ans = "";
-		// 		for(int i=str.length()-1;i>=0;i--){
-		// 		   ans +=str.charAt(i);
-		// 		}
-		// 		System.out.println(ans);
-
 // ------------Remove Duplicates---------
 		// String str = "ManMaiisshh";
 		// HashSet<Character> set = new HashSet<>();
@@ -85,23 +77,5 @@ public class Revsion
         //             left++;
         //     }
         // }
-
-// -------------------------------------Power of 2-----------------------
-        int n = 6;
-
-		if(powerOfTwo(n)){
-			System.out.println("Yes");
-		}else{
-			System.out.println("No");
-		}
-	}
-	public static boolean powerOfTwo(int n){
-		if(n<=0){
-			return false;
-		}
-		while(n%2==0){
-			n=n/2;
-		}	
-		return n==1;
 	}
 }
