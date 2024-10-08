@@ -1,3 +1,9 @@
+/*
+ Merge two sorted arrays into a single sorted array.
+
+Example: Input: [1, 3, 5], [2, 4, 6]
+Output: [1, 2, 3, 4, 5, 6]
+ */
 public class MergeSortedArray_ {
     public static void main(String args[]){
         int arr1[] = {1, 5, 9, 10, 15};
