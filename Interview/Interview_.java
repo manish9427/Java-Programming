@@ -1,6 +1,5 @@
 import java.util.*;
-public class Interview_
-{
+public class Interview_{
 	public static void main(String[] args) {
 // ------------Remove Duplicates---------
 		// String str = "ManMaiisshh";
