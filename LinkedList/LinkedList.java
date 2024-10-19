@@ -15,6 +15,20 @@ public class LinkedList{
         head=newNode;
     }
 
+    public void insertAtLast(int data){
+        Node newNode = new Node(data);
+        if(head == null){
+            head = newNode;
+            return ;
+        }
+
+        Node current = head;
+        while(current.next!= null){
+            current = current.next;
+        }
+        current.next = newNode;
+
+    }
     public void display(){
         Node current = head;
         while(current!=null){
@@ -27,6 +41,7 @@ public class LinkedList{
     public static void main(String args[]){
         LinkedList ll = new LinkedList();
         ll.insertAtFirst(1);
+        ll.insertAtLast(5);
         ll.display();
     }
 }
