@@ -29,6 +29,26 @@ public class LinkedList{
         current.next = newNode;
 
     }
+
+    public void insertAtPosition(int data,int pos){
+        Node newNode = new Node(data);
+        if(pos == 0){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        Node current = head;
+        int count = 0;
+        while(current != null && count <pos-1){
+            current = current.next;
+            count++;
+        }
+        if(current == null){
+            System.out.println("Position Out of Range: "+pos);
+        }
+        newNode.next = current.next;
+        current.next=newNode;
+    }
     public void display(){
         Node current = head;
         while(current!=null){
@@ -42,6 +62,7 @@ public class LinkedList{
         LinkedList ll = new LinkedList();
         ll.insertAtFirst(1);
         ll.insertAtLast(5);
+        ll.insertAtPosition(10, 2);
         ll.display();
     }
 }
