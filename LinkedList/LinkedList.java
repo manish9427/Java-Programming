@@ -59,6 +59,31 @@ public class LinkedList{
         }
         head =head.next ;
     }
+
+    public void removeFromPosition(int pos){
+        if(head == null){
+            System.out.println("List is Empty");
+            return;
+        }
+        if(pos<0){
+            System.out.println("negative Number: "+pos);
+            return;
+        }
+        if(pos == 0){
+            head = head.next;
+            return;
+        }
+        Node current = head;
+        int count = 0;
+        while(current!=null && count<pos-1){
+            current = current.next;
+        }
+        while(current==null || current.next==null){
+            System.out.println("Position Out of Range: "+current.data);
+        }
+        current.next=current.next.next;
+
+    }
     
     public void display(){
         Node current = head;
@@ -78,6 +103,7 @@ public class LinkedList{
         ll.insertAtPosition(2, 0);
         ll.insertAtLast(10);
         ll.removeFromFirst();
+        ll.removeFromPosition(0);
         ll.display();
     }
 }
