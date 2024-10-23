@@ -52,37 +52,73 @@ public class LinkedList{
         current.next=newNode;
     }
 
-    public void removeFromFirst(){
-        if(head == null){
-            System.out.println("list is Empty");
-            return;
-        }
-        head =head.next ;
-    }
-
-    public void removeFromPosition(int pos){
-        if(head == null){
+    public void removeFromFirst() {
+        if (head == null) {
             System.out.println("List is Empty");
             return;
         }
-        if(pos<0){
-            System.out.println("negative Number: "+pos);
+        head = head.next;
+    }
+    
+
+    public void removeFromPosition(int pos) {
+        if (head == null) {
+            System.out.println("List is Empty");
             return;
         }
-        if(pos == 0){
+    
+        if (pos < 0) {
+            System.out.println("Negative Number: " + pos);
+            return;
+        }
+    
+        // If the position is 0, remove the head node.
+        if (pos == 0) {
             head = head.next;
             return;
         }
+    
         Node current = head;
         int count = 0;
-        while(current!=null && count<pos-1){
+    
+        // Traverse to the node before the desired position
+        while (current != null && count < pos - 1) {
+            current = current.next;
+            count++;
+        }
+    
+        // If current is null or current.next is null, position is out of range
+        if (current == null || current.next == null) {
+            System.out.println("Position Out of Range: " + pos);
+            return;
+        }
+    
+        // Remove the node at the desired position by skipping it
+        current.next = current.next.next;
+    }
+    
+
+    public void removeFromLast() {
+        // If the list is empty, there's nothing to remove
+        if (head == null) {
+            System.out.println("List is already empty.");
+            return;
+        }
+    
+        // If there's only one node, remove it by setting head to null
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+    
+        // Traverse to the second-to-last node
+        Node current = head;
+        while (current.next.next != null) {
             current = current.next;
         }
-        while(current==null || current.next==null){
-            System.out.println("Position Out of Range: "+current.data);
-        }
-        current.next=current.next.next;
-
+    
+        // Set the next of the second-to-last node to null, removing the last node
+        current.next = null;
     }
     
     public void display(){
@@ -104,6 +140,7 @@ public class LinkedList{
         ll.insertAtLast(10);
         ll.removeFromFirst();
         ll.removeFromPosition(0);
+        ll.removeFromLast();
         ll.display();
     }
 }
