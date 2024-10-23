@@ -37,16 +37,6 @@ public class LinkedList{
         }
         newNode.next=current.next;
         current.next=newNode;
-
-
-    }
-    public void display(){
-        Node current = head;
-        while(current != null){
-            System.out.print(current.data+" --> ");
-            current = current.next;
-        }
-        System.out.println("Null");
     }
 
     public void insertAtLast(int data){
@@ -61,12 +51,33 @@ public class LinkedList{
         }
         current.next=newNode;
     }
+
+    public void removeFromFirst(){
+        if(head == null){
+            System.out.println("list is Empty");
+            return;
+        }
+        head =head.next ;
+    }
+    
+    public void display(){
+        Node current = head;
+        while(current != null){
+            System.out.print(current.data+" --> ");
+            current = current.next;
+        }
+        System.out.println("Null");
+    }
+
+    
     public static void main(String args[]){
         LinkedList ll = new LinkedList();
         ll.insertAtFirst(1);
         ll.insertAtPosition(0,-1);
         ll.insertAtPosition(0, 5);
+        ll.insertAtPosition(2, 0);
         ll.insertAtLast(10);
+        ll.removeFromFirst();
         ll.display();
     }
 }
