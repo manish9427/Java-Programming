@@ -12,7 +12,17 @@ public class ReverseString{
          */
 
          //In Place
-         
+         int left = 0;
+         int right = str.length()-1;
+         char [] rev = str.toCharArray();
+         while(left<right){
+            char temp = rev[left];
+            rev[left]=rev[right];
+            rev[right]=temp;
+            left++;
+            right--;
+         }
+         System.out.println(String.valueOf(rev));
 
     }
 }
