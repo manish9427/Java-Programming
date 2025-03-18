@@ -1,7 +1,7 @@
 import java.util.*;
 class FibonacciSeries{
     public static void main(String args[]){
-        int n = 5; // 0 1 1 2 3
+        int n = 6; // 0 1 1 2 3
 
         // Using DP
         int [] arr = new int[n];
