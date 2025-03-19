@@ -2,7 +2,7 @@ import java .util.* ;
 public class CountWord {
     public static void main(String args[]){
         String str = "This is a count of Words";
-        String[] words = str.split("\\s+");
+        String[] words = str.split("\\s+"); // Remove Extra Space
         System.out.println(words.length);
 
         //Using HashMap
