@@ -4,6 +4,7 @@ public class ArrayListImpl {
         List<Integer> al = new ArrayList<>();
         al.add(10);
         al.add(20);
+        al.add(30);
 
         System.out.println("Using For Loop");
         for(int i=0;i<al.size();i++){
