@@ -1,11 +1,19 @@
-import java.util.HashMap;
+import java.util.*;
 
 class DuplicateChar{
     public static void main(String args[]){
         String str = "Mississippi";
-        HashMap<String, Integer> map = new HashMap<>();
-        for(int i=0;i<str.length();i++){
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(char c : str.toCharArray()){
+            map.put(c,map.getOrDefault(c,0)+1);
         }
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 1) {
+            System.out.println(entry.getKey() + " appears " +
+           entry.getValue() + " times");
+            }
+        }
+           
     }
 }
 
