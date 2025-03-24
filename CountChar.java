@@ -1,6 +1,6 @@
 import java.util.*;
 
-class DuplicateChar{
+class CountChar{
     public static void main(String args[]){
         String str = "Mississippi";
         HashMap<Character, Integer> map = new HashMap<>();
