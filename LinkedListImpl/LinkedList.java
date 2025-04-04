@@ -67,6 +67,24 @@ public class LinkedList {
             System.out.println(" -> null");
         }
 
+        // Removes ALL occurrences of 'data' in the list
+        public void removeAll(int data) {
+            // Remove leading matches (e.g., head is 5)
+            while (head != null && head.data == data) {
+                head = head.next;
+            }
+            
+            // Remove remaining matches
+            Node current = head;
+            while (current != null && current.next != null) {
+                if (current.next.data == data) {
+                    current.next = current.next.next; // Bypass the node
+                } else {
+                    current = current.next; // Move forward
+                }
+            }
+        }
+
  
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
@@ -74,7 +92,10 @@ public class LinkedList {
         list.insert(5);
         list.insert(0);
         list.insert(10);
-        list.remove(3);
+        list.insert(5);
+
+        list.removeAll(5);
+
         
         list.show();  
     }
