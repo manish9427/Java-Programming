@@ -24,5 +24,4 @@ public class Longest_substring_without_repeating_characters {
         }
         return maxLength;
     }
-        
 }
