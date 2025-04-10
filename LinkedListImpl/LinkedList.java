@@ -62,7 +62,6 @@ public class LinkedList{
     }
    }
 
-
     public void removeAll(int data) {
         while (head != null && head.data == data) {
             head = head.next; // Remove from head
@@ -76,6 +75,17 @@ public class LinkedList{
                 current = current.next; // Move forward
             }
         }
+    }
+
+    public void contains(int target){
+        Node current  = head;
+        while(current != null){
+            if(current.data == target){
+               System.out.println(target + " is present in LinkedList"); 
+            }
+            current = current.next;
+        }
+        System.out.println(target + " is Not present in LinkedList");
     }
 
 
@@ -92,6 +102,7 @@ public class LinkedList{
         list.insert(0);
         list.insert(1);
         list.insertAt(2,0);
+        list.contains(56);
         list.show();
     }
 }
