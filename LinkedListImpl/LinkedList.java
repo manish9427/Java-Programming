@@ -77,15 +77,31 @@ public class LinkedList{
         }
     }
 
-    public void contains(int target){
-        Node current  = head;
-        while(current != null){
-            if(current.data == target){
-               System.out.println(target + " is present in LinkedList"); 
+
+
+    // Check if value exists (returns boolean)
+    public boolean contains(int target) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == target) {
+                return true;
             }
             current = current.next;
         }
-        System.out.println(target + " is Not present in LinkedList");
+        return false;
+    }
+
+    public void reverse(){
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while(current != null){
+            next = current.next; // Store next node
+            current.next = prev; // Reverse the link
+            prev = current;      // Move prev to current
+            current = next;      // Move to next node
+        }
+        head = prev; // Update head to new first node
     }
 
 
@@ -99,10 +115,28 @@ public class LinkedList{
     }
     public static void main(String[] args){
         LinkedList list = new LinkedList();
-        list.insert(0);
-        list.insert(1);
-        list.insertAt(2,0);
-        list.contains(56);
-        list.show();
+        // Test operations
+        list.insert(10);
+        list.insert(20);
+        list.insert(30);
+        list.show(); // 10 -> 20 -> 30 -> null
+
+        list.insertAt(5, 0);
+        list.show(); // 5 -> 10 -> 20 -> 30 -> null
+
+        list.remove(20);
+        list.show(); // 5 -> 10 -> 30 -> null
+
+        list.insert(10);
+        list.insert(10);
+        list.removeAll(10);
+        list.show(); // 5 -> 30 -> null
+
+        System.out.println("Contains 30? " + list.contains(30)); // true
+        System.out.println("Contains 99? " + list.contains(99)); // false
+
+        list.reverse();
+        list.show(); // 30 -> 5 -> null
+
     }
 }
