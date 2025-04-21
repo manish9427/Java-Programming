@@ -104,6 +104,20 @@ public class LinkedList{
         head = prev; // Update head to new first node
     }
 
+    public void middle(){
+        Node slow = head;
+        Node fast = head;
+        if(head != null){
+            while(fast != null && fast.next != null){
+                slow = slow.next; // Move slow by 1
+                fast = fast.next.next; // Move fast by 2
+            }
+            System.out.println("Middle element is: " + slow.data);
+        }else{
+            System.out.println("List is empty");
+        }
+    }
+
 
     public void show(){
         Node current = head;
@@ -119,24 +133,35 @@ public class LinkedList{
         list.insert(10);
         list.insert(20);
         list.insert(30);
-        list.show(); // 10 -> 20 -> 30 -> null
+        list.insert(40);
+        list.insert(50);
+        list.insert(60);
+        list.show(); // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> null
+        System.out.println();
 
         list.insertAt(5, 0);
-        list.show(); // 5 -> 10 -> 20 -> 30 -> null
+        list.show(); // 5 -> 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> null
+        System.out.println();
 
         list.remove(20);
-        list.show(); // 5 -> 10 -> 30 -> null
+        list.show(); // 5 -> 10 -> 30 -> 40 -> 50 -> 60 -> null
+        System.out.println();
 
         list.insert(10);
         list.insert(10);
         list.removeAll(10);
-        list.show(); // 5 -> 30 -> null
+        list.show(); // 5 -> 30 -> 40 -> 50 -> 60 -> null
+        System.out.println();
 
         System.out.println("Contains 30? " + list.contains(30)); // true
         System.out.println("Contains 99? " + list.contains(99)); // false
-
+        System.out.println();
+        list.show(); // 5 -> 30 -> 40 -> 50 -> 60 -> null
+        System.out.println();
         list.reverse();
-        list.show(); // 30 -> 5 -> null
-
+        System.out.print("Reversed list: ");
+        list.show(); 
+        System.out.println(); // 60 -> 50 -> 40 -> 30 -> 5 -> null
+        list.middle(); 
     }
 }
