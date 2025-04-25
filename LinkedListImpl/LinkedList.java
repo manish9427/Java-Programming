@@ -112,7 +112,8 @@ public class LinkedList{
                 slow = slow.next; // Move slow by 1
                 fast = fast.next.next; // Move fast by 2
             }
-            System.out.println("Middle element is: " + slow.data);
+            System.out.println("Middle element is: " + slow);
+            // System.out.println(slow.data);
         }else{
             System.out.println("List is empty");
         }
