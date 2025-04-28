@@ -55,6 +55,18 @@ public class DoublyLinkedList {
             temp.next = current;
         }
     }
+
+    public void insertLast(int data){
+        Node current  = new Node(data);
+        if(head == null){
+            head = current;
+        }else{
+            Node temp = head;
+            while(temp.next!= null){
+                temp = temp.next; 
+            }
+        }
+    }
     
 
     public void show(){
