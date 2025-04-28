@@ -14,72 +14,76 @@ public class DoublyLinkedList {
     Node head;
 
     public void insertFirst(int data){
-        Node current  = new Node(data);
+        Node newNode  = new Node(data);
         if(head == null){
-            head = current;
+            head = newNode;
         }
     }
 
     public void insertMiddle(int data, int index) {
-        Node current = new Node(data);
+        Node newNode = new Node(data);
     
         if (head == null) {
-            head = current; // If the list is empty, just make the new node the head
+            head = newNode; // If the list is empty, just make the new node the head
         } else if (index == 0) {
             // Special case: Insert at the beginning
-            current.next = head;
-            head.prev = current;
-            head = current; // Update the head to point to the new node
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode; // Update the head to point to the new node
         } else {
-            Node temp = head;
+            Node current = head;
             for (int i = 0; i < index - 1; i++) {
-                if (temp == null) {
+                if (current == null) {
                     // Handle the case where the index is out of bounds
                     System.out.println("Index out of bounds");
                     return;
                 }
-                temp = temp.next;
+                current = current.next;
             }
     
-            if (temp == null) {
+            if (current == null) {
                 // Handle the case where the index is out of bounds
                 System.out.println("Index out of bounds");
                 return;
             }
     
-            current.next = temp.next;
-            current.prev = temp;
-            if (temp.next != null) {
-                temp.next.prev = current;
+            newNode.next = current.next;
+            newNode.prev = current;
+            if (current.next != null) {
+                current.next.prev = newNode;
             }
-            temp.next = current;
+            current.next = newNode;
         }
     }
 
     public void insertLast(int data){
-        Node current  = new Node(data);
+        Node newNode  = new Node(data);
         if(head == null){
-            head = current;
+            head = newNode;
         }else{
-            Node temp = head;
-            while(temp.next!= null){
-                temp = temp.next; 
+            Node current = head;
+            while(current.next!= null){
+                current = current.next; 
             }
+            current.next = newNode;
+            newNode.prev = current; // Set the previous pointer of the new node
         }
+
     }
     
 
     public void show(){
-        Node current = head;
-        while(current != null){
-            System.out.print(current.data + " <--> ");
-            current = current.next;
+        Node newNode = head;
+        while(newNode != null){
+            System.out.print(newNode.data + " <--> ");
+            newNode = newNode.next;
         }
         System.out.print("null");
     }
     public  static void main(String[] args) {
         DoublyLinkedList list = new DoublyLinkedList();
         list.insertFirst(1);
+        list.insertLast(10);
         list.insertMiddle(0,0);
         list.show();
     }
