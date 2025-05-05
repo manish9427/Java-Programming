@@ -6,7 +6,7 @@ class Node{
         this.data = data;
         this.next = null;
     }
-}
+}  
 public class LinkedList{
     Node head;
     public void insert(int data){
