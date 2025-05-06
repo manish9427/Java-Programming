@@ -7,7 +7,7 @@ public class RevsionReverseString {
         String rev = reverseString(str);
         System.out.println("Reversed String: " + rev);
     }
-    public static  String reverseString(String str){
+    public static String reverseString(String str){
         int left = 0;
         int right = str.length()-1;
         char[] charArray = str.toCharArray();
