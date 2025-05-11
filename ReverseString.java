@@ -1,15 +1,19 @@
+// Write a Java Program to reverse a string without using String inbuilt function.
+
 public class ReverseString{
     public static void main(String[] args) {
         String str = "Reverse String";
-
-        // Extra Space 
+        // Extra Space
         /*
         String rev = "";
         for(int i=str.length()-1;i>=0;i--){
-            rev += str.charAt(i);
+            rev = rev + str.charAt(i);
         }
-        System.out.println(rev);
+        System.out.println(rev);         
          */
+
+
+
 
          //In Place
          int left = 0;

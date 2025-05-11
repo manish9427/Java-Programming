@@ -26,6 +26,9 @@ public class MasterLinkedList {
     }
 
     public void delete(int data){
+        if(head == null){
+            return;
+        }
         
     }
 
