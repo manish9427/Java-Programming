@@ -14,8 +14,8 @@ public class ReverseString{
 
 
 
-
          //In Place
+         /*
          int left = 0;
          int right = str.length()-1;
          char [] rev = str.toCharArray();
@@ -27,6 +27,16 @@ public class ReverseString{
             right--;
          }
          System.out.println(String.valueOf(rev));
+         String reversedString = new String(rev);
+         System.out.println(reversedString);          
+          */
+
+          // Using StringBuilder
+          StringBuilder sb = new StringBuilder();
+          for(int i=str.length()-1;i>=0;i--){
+            sb.append(str.charAt(i));
+          }
+          System.out.println(sb.toString());
 
     }
 }
