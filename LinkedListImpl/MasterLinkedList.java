@@ -44,6 +44,18 @@ public class MasterLinkedList {
         }
     }
 
+    public Node reverse(){
+        Node prev = null, curr = head;
+        while(curr!=null){
+            Node nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        head = prev;
+        return head;
+    }
+
     public void show(){
         Node current = head;
         while(current != null){
@@ -56,7 +68,8 @@ public class MasterLinkedList {
         MasterLinkedList list = new MasterLinkedList();
         list.insert(10);
         list.insert(20);
-        list.delete(20);
+        // list.delete(20);
+        list.reverse();
         list.show();
     }
 }
