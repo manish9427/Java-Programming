@@ -15,8 +15,9 @@ public class ReverseNumber {
 
          // Using Convert
 
-        //  String str = String.valueOf(num);
-        String str = Integer.toString(num);
+         String str = String.valueOf(num);
+         // i want to check the type of str
+        // String str = Integer.toString(num);
         StringBuilder sb = new StringBuilder();
         for(int i=str.length()-1;i>=0;i--){
             sb.append(str.charAt(i));

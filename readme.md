@@ -10,4 +10,5 @@
 
 # Convert 
 - String str = Integer.toString(num); //Convert the integer to a string
+- String str = String.valueOf(num); //Convert the integer to a string
 - int reversedNum = Integer.parseInt(reversedStr); // Convert the reversed string back to an integer
