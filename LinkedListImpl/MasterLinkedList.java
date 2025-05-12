@@ -26,10 +26,22 @@ public class MasterLinkedList {
     }
 
     public void delete(int data){
+        // this will work for the first Value
         if(head == null){
             return;
         }
-        
+        if(head.data == data){
+            head = head.next;
+            return;
+        }
+
+        Node current  = head;
+        while(current.next != null && current.next.data != data){
+            current = current.next;
+        }
+        if(current.next != null){
+            current.next = current.next.next;
+        }
     }
 
     public void show(){
@@ -44,6 +56,7 @@ public class MasterLinkedList {
         MasterLinkedList list = new MasterLinkedList();
         list.insert(10);
         list.insert(20);
+        list.delete(20);
         list.show();
     }
 }

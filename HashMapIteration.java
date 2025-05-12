@@ -15,5 +15,11 @@ public class HashMapIteration {
         for(Map.Entry<String , Integer> entry : map.entrySet()){
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
+        System.out.println("Iterating using While loop");
+        Iterator<Map.Entry<String,Integer>> iterator = map.entrySet().iterator();
+        while(iterator.hasNext()){
+            Map.Entry<String , Integer> entry = iterator.next();
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
     }
 }
