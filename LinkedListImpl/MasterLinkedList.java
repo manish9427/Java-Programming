@@ -56,6 +56,27 @@ public class MasterLinkedList {
         return head;
     }
 
+    public Node Middle(){
+        Node slow = head, fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
+
+    public boolean hasCycle(){
+        Node slow = head,fast=head;
+        while(fast!=null && fast.next!=null){
+            slow = slow.next;
+            fast=fast.next.next;
+            if(slow==fast) return true;
+        }
+        return false;
+    }
+
+
+
     public void show(){
         Node current = head;
         while(current != null){
@@ -68,8 +89,14 @@ public class MasterLinkedList {
         MasterLinkedList list = new MasterLinkedList();
         list.insert(10);
         list.insert(20);
+        // list.show();
         // list.delete(20);
-        list.reverse();
+        // list.reverse();
+        // Middle will return the middle node
+        // How can i print Middle node
+        System.out.println(list.Middle().data);
+        System.out.println(list.hasCycle());
         list.show();
+
     }
 }
