@@ -6,15 +6,17 @@ public class DuplicateChar {
         String space = str.replaceAll("\\s+","");
         Map<Character,Integer> map = new HashMap<>();
         for(char c : space.toCharArray()){
-            if(!map.containsKey(c)){
-                map.put(c, map.getOrDefault(c,0)+1);
-            }else{
-                map.put(c, 1);
-            }
+            map.put(c, map.getOrDefault(c,0)+1);
         }
         for(char key : map.keySet()){
             if(map.get(key) > 1){
-                System.out.println(key + " : " + map.get(key));
+                System.out.println(key + " : " + map.get(key)); 
+            }
+        }
+
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " : " + entry.getValue());
             }
         }
         
