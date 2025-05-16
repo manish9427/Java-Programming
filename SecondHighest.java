@@ -4,14 +4,17 @@ public class SecondHighest {
         largestNumber(arr);
     }
     public static void largestNumber(int[] nums){
-        int maxValue = Integer.MIN_VALUE;
-        System.out.println(maxValue);
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > maxValue) {
-                maxValue = nums[i];
+        int highest = Integer.MIN_VALUE;
+        int secondHighest = Integer.MIN_VALUE;
+        for(int num : nums){
+            if(num> highest){
+                secondHighest  = highest;
+                highest = num;
+            }else if(num>secondHighest && num!=highest){
+                secondHighest = num;
             }
         }
-        System.out.println(maxValue);
+        System.out.println(secondHighest);
     }
 
 }
