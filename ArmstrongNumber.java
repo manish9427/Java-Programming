@@ -3,7 +3,8 @@ public class ArmstrongNumber {
         int num = 1634; // 1 + 125 + 27 = 153
         int sum = 0;
         int temp = num;
-        int digits = String.valueOf(num).length();
+        int digits = String.valueOf(num).length(); //4
+        System.out.println(digits);
         while(num>0){
             int digit = num %10;
             sum += Math.pow(digit,digits);
