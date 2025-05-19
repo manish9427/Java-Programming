@@ -10,7 +10,8 @@
 - String str = "This is a count of Words";
 - String[] words = str.split("\\s+");  // Split the string into words using whitespace as the delimiter
 - str = str.replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase(); // Remove punctuation and convert the string to lowercase
-- 
+- int num=153;
+- int digits = String.valueOf(num).length(); // 3
 
 # Convert 
 - String str = Integer.toString(num); //Convert the integer to a string
