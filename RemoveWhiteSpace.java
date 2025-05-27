@@ -1,14 +1,11 @@
+// Write a Java Program to remove all white spaces from a string without using replace()
+
 public class RemoveWhiteSpace {
     public static void main(String args[]){
-        String str = "Man ish";
-        String ans = str.replace("Man","Nam"); // O(n)
+        String str = "        Man                           Verma          ";
+        String ans = str.replace("Man","Manish"); 
         System.out.println(ans);
-        String s = "Manish 123 Verma";
-        String ss = s.replaceAll("\\d+",""); 
+        String ss = ans.replaceAll("\\s+"," "); 
         System.out.println(ss);
-        String text = "   Hello, world!   ";
-        String trimmedText = text.trim();
-        System.out.println(trimmedText); 
-
     }
 }
