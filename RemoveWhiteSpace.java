@@ -2,7 +2,7 @@
 
 public class RemoveWhiteSpace {
     public static void main(String args[]){
-        String str = "        Man                           Verma          ";
+        String str = "        Man    \t                       Verma    \n      ";
         String ans = str.replace("Man","Manish"); 
         System.out.println(ans);
         String ss = ans.replaceAll("\\s+"," "); 
