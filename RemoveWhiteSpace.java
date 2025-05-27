@@ -7,5 +7,16 @@ public class RemoveWhiteSpace {
         System.out.println(ans);
         String ss = ans.replaceAll("\\s+"," "); 
         System.out.println(ss);
+        System.out.println(removeWhiteString(ans));
+    }
+    public static String removeWhiteString(String ans){
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < ans.length(); i++){
+            char ch = ans.charAt(i);
+            if(ch != ' ' && ch != '\t' && ch != '\n'){
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
     }
 }
