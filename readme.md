@@ -21,6 +21,7 @@
 # Array
 - String[] words = {"Manish","Verma"}; 
 - for(String word:words){}
+- return new int[] {i,j};
 
 
 # HashMap
