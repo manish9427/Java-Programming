@@ -1,6 +1,6 @@
 import java.util.*;
 
-class CountChar{
+class _3_CountChar{
     public static void main(String args[]){
         String str = "Mississippi";
         HashMap<Character, Integer> map = new HashMap<>();

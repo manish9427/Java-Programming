@@ -1,4 +1,4 @@
-public class PrimeNumber {
+public class _5_PrimeNumber {
     public static void main(String args[]){
         int num = 717777;
         

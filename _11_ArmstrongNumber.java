@@ -1,4 +1,4 @@
-public class ArmstrongNumber {
+public class _11_ArmstrongNumber {
     public static void main(String args[]){
         int num = 1634; // 1 + 125 + 27 = 153
         int sum = 0;

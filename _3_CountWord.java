@@ -1,5 +1,5 @@
 import java .util.* ;
-public class CountWord {
+public class _3_CountWord {
     public static void main(String args[]){
         String str = "This is a count of Words";
 

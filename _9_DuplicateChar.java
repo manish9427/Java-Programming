@@ -1,6 +1,6 @@
 // Write a Java Program to find the duplicate characters in a string
 import java.util.*;
-public class DuplicateChar {
+public class _9_DuplicateChar {
     public static void main(String args[]){
         String str = "Java is a Programming Language";
         String space = str.replaceAll("\\s+","");

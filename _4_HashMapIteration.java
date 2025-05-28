@@ -1,6 +1,6 @@
 // Write a Java Program to iterate HashMap using While and advance for loop
 import java.util.*;
-public class HashMapIteration {
+public class _4_HashMapIteration {
     public static void main(String args[]){
         String str = "This is going to calculate the String This is going";
         String words[] = str.split("\\s+");

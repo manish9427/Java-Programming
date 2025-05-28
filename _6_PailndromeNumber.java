@@ -1,4 +1,4 @@
-public class PailndromeNumber {
+public class _6_PailndromeNumber {
     public static void main(String args[]){
         int num = 121;
         int originalNum = num;

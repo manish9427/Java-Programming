@@ -1,5 +1,5 @@
 import java.util.*;
-class FibonacciSeries{
+class _7_FibonacciSeries{
     public static void main(String args[]){
         int n = 6; // 0 1 1 2 3
 

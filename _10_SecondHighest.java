@@ -1,4 +1,4 @@
-public class SecondHighest {
+public class _10_SecondHighest {
     public static void main(String args[]){
         int[] arr = {3, 30, 34, 5, 9};
         largestNumber(arr);

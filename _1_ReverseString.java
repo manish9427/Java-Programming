@@ -1,6 +1,6 @@
 // Write a Java Program to reverse a string without using String inbuilt function.
 
-public class ReverseString{
+public class _1_ReverseString{
     public static void main(String[] args) {
         String str = "Reverse String";
         // Extra Space
