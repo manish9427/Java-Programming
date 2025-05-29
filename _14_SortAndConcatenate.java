@@ -6,7 +6,7 @@
 */
 
 import java.util.*;
-public class _14_ {
+public class _14_SortAndConcatenate {
     public static void main(String args[]){
         String str = "banana,apple,orange";
         String[] arr = str.split(",");
