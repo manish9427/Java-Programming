@@ -1,7 +1,7 @@
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target
 
 import java.util.*;
-public class _13_TargetSum {
+public class _13_TwoSum {
     public static void main(String args[]){
         int[] nums = {1,2,3,4,5};
         int target = 9;
