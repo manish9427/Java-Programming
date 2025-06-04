@@ -22,6 +22,9 @@
 - String[] words = {"Manish","Verma"}; 
 - for(String word:words){}
 - return new int[] {i,j};
+System.out.println(Arrays.toString(Arrays.copyOf(arr, i)));
+// What this method do?
+// It prints the modified array up to the new length.
 
 
 # HashMap
