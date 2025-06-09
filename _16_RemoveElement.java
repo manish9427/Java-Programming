@@ -26,8 +26,6 @@ public class _16_RemoveElement {
         System.out.println(Arrays.toString(Arrays.copyOf(arr, i)));
         // What this method do?
         // It prints the modified array up to the new length.
-
-
         System.out.println(i);
     }
 }
