@@ -1,4 +1,4 @@
-package LinkedListImpl;
+package LinkedList;
 
 public class DoublyLinkedList {
     Node head;

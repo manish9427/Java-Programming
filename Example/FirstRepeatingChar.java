@@ -1,4 +1,4 @@
-package Other;
+package Example;
 // Input str = "jaaabb"
 // Output = "a"
 
