@@ -1,11 +1,8 @@
-package Keyword;
-
-public class VolatileExample {
-    private volatile boolean flag = true;
+public class VolatileExample1 {
+    private volatile  boolean flag = true;
 
     public void run() {
         while (flag) {
-            // do work
             System.out.println("Thread is running...");
         }
     }
@@ -15,13 +12,13 @@ public class VolatileExample {
     }
 
     public static void main(String[] args) {
-        VolatileExample example = new VolatileExample();
+        VolatileExample1 example = new VolatileExample1();
         Thread thread = new Thread(() -> example.run());
         thread.start();
 
-        // Simulate some work in the main thread
+        System.out.println("Thread has started.");
         try {
-            Thread.sleep(1000); // Let it run for a second
+            Thread.sleep(1000); 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -30,3 +27,4 @@ public class VolatileExample {
         System.out.println("Thread has been stopped.");
     }
 }
+
