@@ -1,3 +1,5 @@
+package Oops;
+
 public class InterfaceExample {
     interface InterviewBit {
         void printMessage();
